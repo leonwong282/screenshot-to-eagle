@@ -189,7 +189,7 @@
 - **Eagle API Token**（選填）
   - 從 Eagle 設定 → 實驗室 → API 取得
   - 如果 Eagle 需要驗證則必填
-  - 範例：`f4f16c3d-a969-4060-b6db-773918ef5cc7`
+  - 範例：`fcc1cccd-acc9-cxxx-bxxb-7xxxxxef5xx7`
 
 - **目標資料夾 ID**（選填）
   - 截圖將儲存到的 Eagle 資料夾 ID
