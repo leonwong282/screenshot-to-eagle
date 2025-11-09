@@ -8,7 +8,7 @@ export async function checkEagleStatus(): Promise<boolean> {
   try {
     const url = await getEagleApiUrl("/api/application/info");
 
-    // 使用 AbortSignal 实现超时
+    // AbortSignal implement timeout
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 3000);
 

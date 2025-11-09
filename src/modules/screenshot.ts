@@ -90,7 +90,7 @@ export async function takeScreenshot(options: ScreenshotOptions): Promise<Screen
 }
 
 /**
- * 区域截图（快捷方法）
+ * Capture selection screenshot (shortcut method)
  */
 export async function captureSelection(
   outputPath: string,
@@ -106,7 +106,7 @@ export async function captureSelection(
 }
 
 /**
- * 窗口截图（快捷方法）
+ * Capture window screenshot (shortcut method)
  */
 export async function captureWindow(
   outputPath: string,
@@ -122,7 +122,7 @@ export async function captureWindow(
 }
 
 /**
- * 全屏截图（快捷方法）
+ * Capture full screen screenshot (shortcut method)
  */
 export async function captureScreen(
   outputPath: string,
@@ -138,7 +138,7 @@ export async function captureScreen(
 }
 
 /**
- * 延迟截图（快捷方法）
+ * Capture screenshot with delay (shortcut method)
  */
 export async function captureWithDelay(
   outputPath: string,

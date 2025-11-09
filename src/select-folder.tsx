@@ -19,7 +19,7 @@ export default function Command() {
     try {
       setIsLoading(true);
 
-      // 检查 Eagle 是否运行
+      // Check if Eagle is running
       const eagleRunning = await checkEagleStatus();
       if (!eagleRunning) {
         await showToast({
@@ -31,13 +31,13 @@ export default function Command() {
         return;
       }
 
-      // 获取当前配置的文件夹 ID
+      // Get currently configured folder ID
       const savedFolderId = await LocalStorage.getItem<string>(FOLDER_ID_KEY);
       if (savedFolderId) {
         setCurrentFolderId(savedFolderId);
       }
 
-      // 获取文件夹列表
+      // Get folder list
       const [allFolders, recent] = await Promise.all([getFolderList(), getRecentFolders()]);
 
       setFolders(allFolders);
@@ -55,7 +55,7 @@ export default function Command() {
 
   async function selectFolder(folder: EagleFolder) {
     try {
-      // 保存选中的文件夹 ID
+      // Save selected folder ID
       await LocalStorage.setItem(FOLDER_ID_KEY, folder.id);
       setCurrentFolderId(folder.id);
 
