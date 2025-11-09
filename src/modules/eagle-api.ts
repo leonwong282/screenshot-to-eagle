@@ -1,10 +1,4 @@
-import {
-  EagleApiResponse,
-  EagleAppInfo,
-  EagleFolder,
-  UploadScreenshotOptions,
-  UploadResult,
-} from "../types";
+import { EagleApiResponse, EagleAppInfo, EagleFolder, UploadScreenshotOptions, UploadResult } from "../types";
 import { getEagleApiUrl } from "./config";
 
 /**
@@ -114,7 +108,8 @@ export async function uploadScreenshot(options: UploadScreenshotOptions): Promis
         "Content-Type": "application/json",
       },
       body: JSON.stringify(payload),
-    }); if (!response.ok) {
+    });
+    if (!response.ok) {
       const errorText = await response.text();
       throw new Error(`Upload failed: ${response.statusText}. ${errorText}`);
     }

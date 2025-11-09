@@ -92,7 +92,11 @@ export async function takeScreenshot(options: ScreenshotOptions): Promise<Screen
 /**
  * 区域截图（快捷方法）
  */
-export async function captureSelection(outputPath: string, includeCursor = false, playSound = true): Promise<ScreenshotResult> {
+export async function captureSelection(
+  outputPath: string,
+  includeCursor = false,
+  playSound = true,
+): Promise<ScreenshotResult> {
   return takeScreenshot({
     mode: ScreenshotMode.SELECTION,
     outputPath,
@@ -104,7 +108,11 @@ export async function captureSelection(outputPath: string, includeCursor = false
 /**
  * 窗口截图（快捷方法）
  */
-export async function captureWindow(outputPath: string, includeCursor = false, playSound = true): Promise<ScreenshotResult> {
+export async function captureWindow(
+  outputPath: string,
+  includeCursor = false,
+  playSound = true,
+): Promise<ScreenshotResult> {
   return takeScreenshot({
     mode: ScreenshotMode.WINDOW,
     outputPath,
@@ -116,7 +124,11 @@ export async function captureWindow(outputPath: string, includeCursor = false, p
 /**
  * 全屏截图（快捷方法）
  */
-export async function captureScreen(outputPath: string, includeCursor = false, playSound = true): Promise<ScreenshotResult> {
+export async function captureScreen(
+  outputPath: string,
+  includeCursor = false,
+  playSound = true,
+): Promise<ScreenshotResult> {
   return takeScreenshot({
     mode: ScreenshotMode.SCREEN,
     outputPath,
@@ -132,7 +144,7 @@ export async function captureWithDelay(
   outputPath: string,
   delay: number,
   includeCursor = false,
-  playSound = true
+  playSound = true,
 ): Promise<ScreenshotResult> {
   return takeScreenshot({
     mode: ScreenshotMode.TIMED,
