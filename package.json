@@ -17,8 +17,36 @@
     {
       "name": "shot-to-eagle",
       "title": "Shot to Eagle",
-      "subtitle": "Screenshot save to Eagle",
-      "description": "Take a screenshot and automatically save it to Eagle",
+      "subtitle": "Default mode",
+      "description": "Take a screenshot using default mode and save to Eagle",
+      "mode": "no-view"
+    },
+    {
+      "name": "shot-to-eagle-selection",
+      "title": "Shot to Eagle: Selection",
+      "subtitle": "Area screenshot",
+      "description": "Take a selection screenshot and save to Eagle",
+      "mode": "no-view"
+    },
+    {
+      "name": "shot-to-eagle-window",
+      "title": "Shot to Eagle: Window",
+      "subtitle": "Window screenshot",
+      "description": "Take a window screenshot and save to Eagle",
+      "mode": "no-view"
+    },
+    {
+      "name": "shot-to-eagle-fullscreen",
+      "title": "Shot to Eagle: Full Screen",
+      "subtitle": "Full screen screenshot",
+      "description": "Take a full screen screenshot and save to Eagle",
+      "mode": "no-view"
+    },
+    {
+      "name": "shot-to-eagle-timed",
+      "title": "Shot to Eagle: Timed",
+      "subtitle": "Delayed screenshot",
+      "description": "Take a timed screenshot (5s delay) and save to Eagle",
       "mode": "no-view"
     },
     {
@@ -80,15 +108,6 @@
           "value": "timed"
         }
       ]
-    },
-    {
-      "name": "autoTags",
-      "type": "textfield",
-      "required": false,
-      "title": "Auto Tags",
-      "description": "Tags to automatically add to screenshots (comma-separated)",
-      "default": "screenshot, raycast",
-      "placeholder": "screenshot, raycast, design"
     },
     {
       "name": "includeCursor",
