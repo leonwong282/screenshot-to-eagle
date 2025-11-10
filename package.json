@@ -1,0 +1,160 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "screenshot-to-eagle",
+  "title": "Screenshot to Eagle",
+  "description": "macOS Screenshot auto save to Eagle.",
+  "icon": "extension-icon.png",
+  "author": "leonwong282",
+  "platforms": [
+    "macOS"
+  ],
+  "categories": [
+    "Applications",
+    "Productivity"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "shot-to-eagle",
+      "title": "Shot to Eagle",
+      "subtitle": "Default mode",
+      "description": "Take a screenshot using default mode and save to Eagle",
+      "mode": "no-view"
+    },
+    {
+      "name": "shot-to-eagle-selection",
+      "title": "Shot to Eagle: Selection",
+      "subtitle": "Area screenshot",
+      "description": "Take a selection screenshot and save to Eagle",
+      "mode": "no-view"
+    },
+    {
+      "name": "shot-to-eagle-window",
+      "title": "Shot to Eagle: Window",
+      "subtitle": "Window screenshot",
+      "description": "Take a window screenshot and save to Eagle",
+      "mode": "no-view"
+    },
+    {
+      "name": "shot-to-eagle-fullscreen",
+      "title": "Shot to Eagle: Full Screen",
+      "subtitle": "Full screen screenshot",
+      "description": "Take a full screen screenshot and save to Eagle",
+      "mode": "no-view"
+    },
+    {
+      "name": "shot-to-eagle-timed",
+      "title": "Shot to Eagle: Timed",
+      "subtitle": "Delayed screenshot",
+      "description": "Take a timed screenshot (5s delay) and save to Eagle",
+      "mode": "no-view"
+    },
+    {
+      "name": "select-folder",
+      "title": "Select Eagle Folder",
+      "subtitle": "Choose target folder",
+      "description": "Select the Eagle folder where screenshots will be saved",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "eagleApiUrl",
+      "type": "textfield",
+      "required": false,
+      "title": "Eagle API URL",
+      "description": "Eagle Web API URL (default: http://localhost:41595)",
+      "default": "http://localhost:41595",
+      "placeholder": "http://localhost:41595"
+    },
+    {
+      "name": "eagleApiToken",
+      "type": "textfield",
+      "required": false,
+      "title": "Eagle API Token",
+      "description": "Your Eagle Web API token (optional, find in Eagle settings)",
+      "placeholder": "f4f16c3d-a969-4060-b6db-773918ef5cc7"
+    },
+    {
+      "name": "folderId",
+      "type": "textfield",
+      "required": false,
+      "title": "Target Folder ID",
+      "description": "Eagle folder ID where screenshots will be saved (optional, leave empty for root)",
+      "placeholder": "KBCB8BK86WIW1"
+    },
+    {
+      "name": "defaultMode",
+      "type": "dropdown",
+      "required": false,
+      "title": "Default Screenshot Mode",
+      "description": "The default mode for taking screenshots",
+      "default": "selection",
+      "data": [
+        {
+          "title": "Selection (Interactive)",
+          "value": "selection"
+        },
+        {
+          "title": "Window",
+          "value": "window"
+        },
+        {
+          "title": "Full Screen",
+          "value": "screen"
+        },
+        {
+          "title": "Timed (Delayed)",
+          "value": "timed"
+        }
+      ]
+    },
+    {
+      "name": "includeCursor",
+      "type": "checkbox",
+      "required": false,
+      "title": "Include Cursor",
+      "label": "Include mouse cursor in screenshots",
+      "description": "Whether to include the mouse cursor in screenshots",
+      "default": false
+    },
+    {
+      "name": "playSound",
+      "type": "checkbox",
+      "required": false,
+      "title": "Screenshot Sound",
+      "label": "Play sound when taking screenshot",
+      "description": "Whether to play the camera sound effect",
+      "default": true
+    },
+    {
+      "name": "timedDelay",
+      "type": "textfield",
+      "required": false,
+      "title": "Timed Delay (seconds)",
+      "description": "Delay in seconds for timed screenshot mode",
+      "default": "5",
+      "placeholder": "5"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.103.6",
+    "@raycast/utils": "^1.17.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.0.4",
+    "@types/node": "22.13.10",
+    "@types/react": "19.0.10",
+    "eslint": "^9.22.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
