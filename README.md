@@ -1,7 +1,6 @@
 <a id="readme-top"></a>
 
 <div align="center">
-
 <a href="https://github.com/leonwong282/programming-learning">
   <img src="assets/extension-icon.png" alt="Logo" width="80" height="80">
 </a>
@@ -72,8 +71,6 @@
 - **Language**: TypeScript 5.8.2
 - **Runtime**: Node.js 22.13.10
 - **Screenshot**: macOS native `screencapture` command
-- **API**: Eagle Web API (REST)
-
 - **API**: Eagle Web API (REST)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

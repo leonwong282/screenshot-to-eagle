@@ -19,12 +19,11 @@ export async function getConfig(): Promise<PluginConfig> {
 
   // Prioritize folderId from LocalStorage (selected via UI)
   const savedFolderId = await LocalStorage.getItem<string>(FOLDER_ID_KEY);
-  const folderId = savedFolderId || preferences.folderId;
 
   return {
     eagleApiUrl: preferences.eagleApiUrl || "http://localhost:41595",
     eagleApiToken: preferences.eagleApiToken,
-    folderId: folderId,
+    folderId: savedFolderId || preferences.folderId,
     defaultMode: (preferences.defaultMode as ScreenshotMode) || ScreenshotMode.SELECTION,
     includeCursor: preferences.includeCursor ?? false,
     playSound: preferences.playSound ?? true,

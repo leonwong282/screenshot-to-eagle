@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.0.0] - 2025-11-09
+## [1.0.0] - {PR_MERGE_DATE}
 
 ### ✨ Added
 - 📸 **Core Screenshot Functionality**
